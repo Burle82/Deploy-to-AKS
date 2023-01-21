@@ -84,3 +84,4 @@ stages:
                 $(Pipeline.Workspace)/manifests/service.yml
               containers: '$(acrdevurl)/$(imageRepo):$(tag)'
               imagePullSecrets: '$(acrsecret)'
+              
