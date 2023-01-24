@@ -15,7 +15,7 @@ stages:
   - job: Build
     displayName: Build
     pool:
-      vmImage: ubuntu-latest
+      name: Default
     steps:
     - task: Docker@2
       inputs:
@@ -41,7 +41,7 @@ stages:
   - job: Deploy
     displayName: Deploy to Azure AKS
     pool:
-      vmImage: ubuntu-latest
+      name: Default
     steps:
     - task: DownloadPipelineArtifact@2
       inputs:
